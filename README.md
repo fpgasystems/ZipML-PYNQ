@@ -39,7 +39,7 @@ sudo pip3.6 install --upgrade git+https://github.com/fpgasystems/ZipML-PYNQ
 3. Explore L2SVM_MNIST (SVM training using handwritten digit images) or LINREG_YEARPREDICTIONMSD (linear regression for year prediction using extracted features from audio).
 
 (Using test_*.py files)
-1. $ git clone https://gitlab.com/kaankara/ZipML-PYNQ.git
+1. $ git clone https://github.com/fpgasystems/ZipML-PYNQ
 2. $ Get the datasets using ./zipml/Notebooks/get_mnist.sh and ./zipml/Notebooks/get_yearpredictionMSD.sh
 3. $ sudo python3.6 ./tests/test_pynq_mnist.py --train /path/to/mnist --test /path/to/mnist.t
 4. $ sudo python3.6 ./tests/test_pynq_YearPredictionMSD.py --train /path/to/YearPredictionMSD
