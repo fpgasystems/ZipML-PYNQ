@@ -31,7 +31,7 @@ If you find ZipML-PYNQ useful, please consider citing ZipML papers:
 
 ## Quick start
 
-sudo pip3.6 install --upgrade git+https://gitlab.com/kaankara/ZipML-PYNQ.git
+sudo pip3.6 install --upgrade git+https://github.com/fpgasystems/ZipML-PYNQ
 
 (Using Jupyter notebooks)
 1. Connect to the Jupyter Notebooks server running on your PYNQ (http://pynq.readthedocs.io/en/latest/jupyter_notebooks.html)
