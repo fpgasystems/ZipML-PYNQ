@@ -19,11 +19,12 @@ If you find ZipML-PYNQ useful, please consider citing ZipML papers:
   organization={IEEE}
 }
 
-@article{zhang2016zipml,
-  title={The ZipML Framework for Training Models with End-to-End Low Precision: The Cans, the Cannots, and a Little Bit of Deep Learning},
+@inproceedings{zhang2017zipml,
+  title={ZipML: Training Linear Models with End-to-End Low Precision, and a Little Bit of Deep Learning},
   author={Zhang, Hantian and Li, Jerry and Kara, Kaan and Alistarh, Dan and Liu, Ji and Zhang, Ce},
-  journal={arXiv preprint arXiv:1611.05402},
-  year={2016}
+  booktitle={International Conference on Machine Learning},
+  pages={4035--4043},
+  year={2017}
 }
 
 ## Quick start
