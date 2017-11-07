@@ -1,10 +1,12 @@
 # ZipML-PYNQ
 
+![picture](logo.jpg)
+
 This repository contains the project to perform linear model training using stochastic gradient descent (SGD) on PYNQ.
 The training can be performed on either full or low precision (8, 4, 2 and even 1-bit!) data, to accelerate SGD up to 3 orders of magnitude on PYNQ.
 Necessary Python classes are provided to interact with the FPGA acceleration in an easy and abstract way.
 
-![picture](arch.png)
+![picture](arch.jpg)
 
 ## Citation
 
