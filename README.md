@@ -12,22 +12,22 @@ Necessary Python classes are provided to interact with the FPGA acceleration in 
 
 If you find ZipML-PYNQ useful, please consider citing ZipML papers:
 
-@inproceedings{kara2017fpga,
+  @inproceedings{kara2017fpga,
   title={FPGA-accelerated Dense Linear Machine Learning: A Precision-Convergence Trade-off},
   author={Kara, Kaan and Alistarh, Dan and Alonso, Gustavo and Mutlu, Onur and Zhang, Ce},
   booktitle={Field-Programmable Custom Computing Machines (FCCM), 2017 IEEE 25th Annual International Symposium on},
   pages={160--167},
   year={2017},
   organization={IEEE}
-}
+  }
 
-@inproceedings{zhang2017zipml,
-  title={ZipML: Training Linear Models with End-to-End Low Precision, and a Little Bit of Deep Learning},
-  author={Zhang, Hantian and Li, Jerry and Kara, Kaan and Alistarh, Dan and Liu, Ji and Zhang, Ce},
-  booktitle={International Conference on Machine Learning},
-  pages={4035--4043},
-  year={2017}
-}
+  @inproceedings{zhang2017zipml,
+    title={ZipML: Training Linear Models with End-to-End Low Precision, and a Little Bit of Deep Learning},
+    author={Zhang, Hantian and Li, Jerry and Kara, Kaan and Alistarh, Dan and Liu, Ji and Zhang, Ce},
+    booktitle={International Conference on Machine Learning},
+    pages={4035--4043},
+    year={2017}
+  }
 
 ## Quick start
 
