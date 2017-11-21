@@ -64,9 +64,17 @@ TF_GALAXY (Transfer learning on InceptionV3 extracted features to detect galaxy 
 
 ## Transfer learning using PYNQ
 
-1. Use zipml/inception-expand-any.py to run images on ImageNet-trained InceptionV3 to extract features:
+You can perform transfer learning on your own image data sets.
+
+1. Install Tensorflow (https://github.com/tensorflow/tensorflow) on your development machine.
+
+2. On the development machine: Use zipml/inception-expand-any.py to run images on ImageNet-trained InceptionV3 to extract features:
+
 	python ./inception-expand-any.py --image_dir /path/to/cat_images --label 0 --output ./cats.dat
 	python ./inception-expand-any.py --image_dir /path/to/dog_images --label 1 --output ./dogs.dat
-2. Merge 2 files in single shuffled files for training and testing:
+
+3. Merge 2 files in single shuffled files for training and testing:
+
 	python ./inception-expand-any.py --mix './cats.dat ./dogs.dat' --train training_dataset.dat --len_train 10000 --test testing_dataset.dat --len_test 1000
-3. Use training_dataset.dat as libsvm-formatted input to ZipML_SGD to train a linear SVM (more details in zipml/Notebooks and tests).
+
+4. On PYNQ: Use training_dataset.dat as libsvm-formatted input to ZipML_SGD to train a linear SVM (more details in zipml/Notebooks and tests).
