@@ -70,10 +70,12 @@ You can perform transfer learning on your own image data sets.
 
 2. On the development machine: Use zipml/inception-expand-any.py to run images on ImageNet-trained InceptionV3 to extract features:
 
+
 	python ./inception-expand-any.py --image_dir /path/to/cat_images --label 0 --output ./cats.dat
 	python ./inception-expand-any.py --image_dir /path/to/dog_images --label 1 --output ./dogs.dat
 
 3. Merge 2 files in single shuffled files for training and testing:
+
 
 	python ./inception-expand-any.py --mix './cats.dat ./dogs.dat' --train training_dataset.dat --len_train 10000 --test testing_dataset.dat --len_test 1000
 
