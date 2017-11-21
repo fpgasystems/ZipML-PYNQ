@@ -72,11 +72,14 @@ You can perform transfer learning on your own image data sets.
 
 
 	python ./inception-expand-any.py --image_dir /path/to/cat_images --label 0 --output ./cats.dat
+
 	python ./inception-expand-any.py --image_dir /path/to/dog_images --label 1 --output ./dogs.dat
+
 
 3. Merge 2 files in single shuffled files for training and testing:
 
 
 	python ./inception-expand-any.py --mix './cats.dat ./dogs.dat' --train training_dataset.dat --len_train 10000 --test testing_dataset.dat --len_test 1000
+
 
 4. On PYNQ: Use training_dataset.dat as libsvm-formatted input to ZipML_SGD to train a linear SVM (more details in zipml/Notebooks and tests).
