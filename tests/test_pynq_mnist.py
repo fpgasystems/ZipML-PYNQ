@@ -81,7 +81,7 @@ for c in range(0, 10):
 
 
 Z.load_libsvm_data(args.test, 10000, 780)
-Z.a_normalize(to_min1_1=0, row_or_column='r');
+Z.a_normalize(to_min1_1=0, row_or_column='r')
 
 classes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 matches = Z.multi_classification(xs, classes)

@@ -330,6 +330,16 @@ class ZipML_SGD:
 
 		return x_history
 
+	def binary_classification(self, x):
+		count_trues = 0
+		for i in range(0, self.a.shape[0]):
+			matched_class = 0
+			dot = np.dot(x, self.a[i,:])
+			if (dot > 0 and self.binarized_b[i] == 1.0) or (dot < 0 and self.binarized_b[i] == -1.0):
+				count_trues += 1
+
+		return count_trues
+
 	def multi_classification(self, xs, classes):
 		matched_class = -1
 		count_trues = 0
@@ -344,7 +354,6 @@ class ZipML_SGD:
 				count_trues = count_trues + 1
 
 		return count_trues
-
 
 	def configure_SGD_FPGA(self, num_epochs, step_size, cost_pos, cost_neg, b_binarize, b_to_binarize):
 		if self.on_pynq == 0:

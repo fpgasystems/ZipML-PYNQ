@@ -36,7 +36,9 @@ sudo pip3.6 install --upgrade git+https://github.com/fpgasystems/ZipML-PYNQ
 (Using Jupyter notebooks)
 1. Connect to the Jupyter Notebooks server running on your PYNQ (http://pynq.readthedocs.io/en/latest/jupyter_notebooks.html)
 2. Open ZipML-Notebooks
-3. Explore L2SVM_MNIST (SVM training using handwritten digit images) or LINREG_YEARPREDICTIONMSD (linear regression for year prediction using extracted features from audio).
+3. Explore L2SVM_MNIST (SVM training using handwritten digit images) or
+LINREG_YEARPREDICTIONMSD (linear regression for year prediction using extracted features from audio) or
+TF_GALAXY (Transfer learning on InceptionV3 extracted features to detect galaxy mergers from images).
 
 (Using test_*.py files)
 1. $ git clone https://github.com/fpgasystems/ZipML-PYNQ
@@ -59,3 +61,12 @@ sudo pip3.6 install --upgrade git+https://github.com/fpgasystems/ZipML-PYNQ
 2. $ export PYNQ_SGD_ROOT=/path/to/ZipML-PYNQ/
 3. $ ./make_hw <quantization_bits> (0=full precision, 1, 2, 4 or 8)
 4. Wait until the process finishes. Then you can find the new bitstream and .tcl file in $PYNQ_SGD_ROOT/output/pynq-sgd-vivado-Qx/pynq-sgd-vivado-Qx.runs/impl_1/
+
+## Transfer learning using PYNQ
+
+1. Use zipml/inception-expand-any.py to run images on ImageNet-trained InceptionV3 to extract features:
+	python ./inception-expand-any.py --image_dir /path/to/cat_images --label 0 --output ./cats.dat
+	python ./inception-expand-any.py --image_dir /path/to/dog_images --label 1 --output ./dogs.dat
+2. Merge 2 files in single shuffled files for training and testing:
+	python ./inception-expand-any.py --mix './cats.dat ./dogs.dat' --train training_dataset.dat --len_train 10000 --test testing_dataset.dat --len_test 1000
+3. Use training_dataset.dat as libsvm-formatted input to ZipML_SGD to train a linear SVM (more details in zipml/Notebooks and tests).

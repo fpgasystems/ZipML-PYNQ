@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # This script will grab the LibSVM formatted version of the
-# MNIST database if we don't already have it.mnist
+# MNIST data set if we don't already have it
 
 if [ ! -d "mnist" ]; then
 	mkdir mnist
