@@ -36,9 +36,10 @@ sudo pip3.6 install --upgrade git+https://github.com/fpgasystems/ZipML-PYNQ
 (Using Jupyter notebooks)
 1. Connect to the Jupyter Notebooks server running on your PYNQ (http://pynq.readthedocs.io/en/latest/jupyter_notebooks.html)
 2. Open ZipML-Notebooks
-3. Explore L2SVM_MNIST (SVM training using handwritten digit images) or
-LINREG_YEARPREDICTIONMSD (linear regression for year prediction using extracted features from audio) or
-TF_GALAXY (Transfer learning on InceptionV3 extracted features to detect galaxy mergers from images).
+3. Explore:
+- L2SVM_MNIST (SVM training using handwritten digit images)
+- LINREG_YEARPREDICTIONMSD (linear regression for year prediction using extracted features from audio)
+- TF_GALAXY (Transfer learning on InceptionV3 extracted features to detect galaxy mergers from images)
 
 (Using test_*.py files)
 1. $ git clone https://github.com/fpgasystems/ZipML-PYNQ
